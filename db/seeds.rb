@@ -1,9 +1,21 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+
+# Clear existing data to prevent duplication issues
+Author.destroy_all
+Book.destroy_all
+
+# Create Authors
+authors = Author.create([
+  { name: "J.K. Rowling" },
+  { name: "Tony Morrison" },
+  { name: "Stephen King" },
+  { name: "Alice Walker" },
+])
+
+# Iterate over each author and create books
+authors.each_with_index do |author, index|
+  4.times do |i|
+    author.books.create(title: "Book #{i + 1} by Author #{index + 1}")
+  end
+end
+
+puts "Created #{Author.count} authors and #{Book.count} books."
