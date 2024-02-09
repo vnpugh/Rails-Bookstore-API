@@ -5,18 +5,20 @@ class BooksController < ApplicationController
     # the set_book method should run before only the show, update, and destroy actions.
     before_action :set_author
     before_action :set_book, only: [:show, :update, :destroy]
-  
-    # GET /authors/:author_id/books
+    
+    # CRUD
+    
+    # GET /authors/:author_id/books (Index)
     def index
       render json: @author.books
     end
   
-    # GET /authors/:author_id/books/:id
+    # GET /authors/:author_id/books/:id (Show)
     def show
       render json: @book
     end
   
-    # POST /authors/:author_id/books
+    # POST /authors/:author_id/books (Create)
     def create
       @book = @author.books.build(book_params)
   
@@ -27,7 +29,7 @@ class BooksController < ApplicationController
       end
     end
   
-    # PATCH/PUT /authors/:author_id/books/:id
+    # PATCH/PUT /authors/:author_id/books/:id (Update)
     def update
       if @book.update(book_params)
         render json: @book
@@ -36,7 +38,7 @@ class BooksController < ApplicationController
       end
     end
   
-    # DELETE /authors/:author_id/books/:id
+    # DELETE /authors/:author_id/books/:id (Delete)
     def destroy
       @book.destroy
     end
