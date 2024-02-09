@@ -1,2 +1,5 @@
+
 class Author < ApplicationRecord
-end
+    has_many :books, dependent: :destroy
+  end
+  
