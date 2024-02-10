@@ -8,14 +8,15 @@ class BooksController < ApplicationController
     
     # CRUD
     
-    # GET /authors/:author_id/books (Index)
+    # GET all books /authors/:author_id/books (Index)
     def index
       render json: @author.books
     end
   
-    # GET /authors/:author_id/books/:id (Show)
+    # GET books by id /authors/:author_id/books/:id (Show)
     def show
-      render json: @book
+      book = Book.find(params[:id])
+      render json: @book.as_json(methods: :author_name)
     end
   
     # POST /authors/:author_id/books (Create)
