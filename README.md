@@ -8,15 +8,12 @@ I developed this project as part of the Codefi Codelabs curriculum. The primary 
 ## Key Features
 
 <li>RESTful API Design: The project adheres to REST principles, making it scalable and easy to integrate with various frontend technologies.</li> <br>
-<ul>
-  <li>
-    CRUD Operations: Users can perform Create, Read, Update, and Delete (CRUD) operations on two main resources:
+<li> CRUD Operations: Users can perform Create, Read, Update, and Delete (CRUD) operations on two main resources:
     <ul>
       <li><strong>Books</strong>: Manage the bookstore's inventory, including titles, authors, and publication details.</li>
       <li><strong>Authors</strong>: Maintain author profiles, including their biographies and associated works.</li>
     </ul>
   </li>
-</ul>
 
 ## Testing
 
@@ -38,7 +35,7 @@ To ensure the reliability and functionality of the API endpoints, I utilized Min
   <li>Understood RESTful design patterns and their implementation in web services.</li>
   <li>Mastered ActiveRecord for database management and handling associations between different models (Books and Authors).</li>
   <li>Developed skills in writing automated tests using Minitest, emphasizing the importance of testing in software development.</li>
-</ul> <br>
+</ul>
 
 <p>This project provided hands-on experience in building a backend service from scratch, emphasizing clean code practices, API design principles, and the significance of testing in building reliable software.</p>
 
