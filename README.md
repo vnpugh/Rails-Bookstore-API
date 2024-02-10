@@ -17,9 +17,9 @@ I developed this project as part of the Codefi Codelabs curriculum. The primary 
 
 ## Testing the API
 
-To ensure the reliability and functionality of the API endpoints, I utilized Minitest to create comprehensive tests for each endpoint in both the author and book controllers. This approach reinforced the backend's robustness and provided a safety net for future enhancements.
-<br>
-To interact with the API, I also utilized Postman, a popular tool for API testing. Postman allows you to easily construct requests, send them to your API, and view the responses.
+<p>To ensure the reliability and functionality of the API endpoints, I utilized Minitest to create comprehensive tests for each endpoint in both the author and book controllers. This approach reinforced the backend's robustness and provided a safety net for future enhancements.
+</p><br>
+<p>To interact with the API, I also utilized Postman, a popular tool for API testing. Postman allows you to easily construct requests, send them to your API, and view the responses.</p>
 
 ## Learning Goals
 
